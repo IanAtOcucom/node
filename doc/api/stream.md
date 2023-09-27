@@ -289,8 +289,10 @@ which serves a special purpose within streams). Such streams are considered to
 operate in "object mode".
 
 Stream instances are switched into object mode using the `objectMode` option
-when the stream is created. Attempting to switch an existing stream into
-object mode is not safe.
+when the stream is created. ([`Duplex`][] and [`Transform`][] streams have 
+separate `readableObjectMode` and `writableObjectMode` options for their 
+respective streams.)
+Attempting to switch an existing stream into object mode is not safe.
 
 ### Buffering
 
